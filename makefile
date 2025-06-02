@@ -18,8 +18,8 @@ $(BIN_DIR)/%.exe: $(SRC_DIR)/%.cpp
 all: $(EXE_FILES)
 
 # Regla para ejecutar cada archivo .exe
-run%: $(BIN_DIR)/%.exe
-	./$<
+#run%: $(BIN_DIR)/%.exe
+#	./$<
 
 # Regla para limpiar los archivos generados
 clean:
@@ -27,3 +27,24 @@ clean:
 
 .PHONY: all clean
 .PHONY: run-%
+
+# compilar
+# g++ ZType.cpp -o bin/programa.exe
+# run
+# .\bin\programa.exe
+# remove
+# rm -f bin\programa.exe
+
+compile:
+	g++ ZType.cpp -o bin/programa.exe -IC:/SFML/include -LC:/SFML/lib -lsfml-graphics -lsfml-window -lsfml-system
+	.\bin\programa.exe
+
+run:
+	.\bin\programa.exe
+
+compile2:
+	g++ ZType_copy.cpp -o bin/programa2.exe -IC:/SFML/include -LC:/SFML/lib -lsfml-graphics -lsfml-window -lsfml-system
+	.\bin\programa2.exe
+
+run2:
+	.\bin\programa2.exe
