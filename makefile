@@ -41,10 +41,3 @@ compile:
 
 run:
 	.\bin\programa.exe
-
-compile2:
-	g++ ZType_copy.cpp -o bin/programa2.exe -IC:/SFML/include -LC:/SFML/lib -lsfml-graphics -lsfml-window -lsfml-system
-	.\bin\programa2.exe
-
-run2:
-	.\bin\programa2.exe
